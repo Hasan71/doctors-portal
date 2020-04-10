@@ -40,7 +40,7 @@ function App() {
       if(allBookedAppointments.length){
         for (const ap of allBookedAppointments) {
           if(!map.has(ap.patientInfo.phone)){
-              map.set(ap.patientInfo.phone, true);    // set any value to Map
+              map.set(ap.patientInfo.phone, true); 
               uniquePatients.push({
                   name: ap.patientInfo.name,
                   phone: ap.patientInfo.phone,
@@ -62,7 +62,9 @@ function App() {
 
   return (
     <DataContext.Provider value={contextData}>
+
     <CalenderContext.Provider value={calenderContextValue}>
+
     <Router>
         <Switch>
           <Route exact path="/">
@@ -93,8 +95,11 @@ function App() {
         </Switch>
         
     </Router>
+
     </CalenderContext.Provider>
+
     </DataContext.Provider>
+    
   );
 }
 

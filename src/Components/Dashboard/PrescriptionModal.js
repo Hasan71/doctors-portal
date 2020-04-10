@@ -4,18 +4,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faPlus } from '@fortawesome/free-solid-svg-icons';
 import { useForm } from 'react-hook-form';
 import { DataContext } from '../../App';
+
 const PrescriptionModal = (props) => {
    const ContextData = useContext(DataContext);
     
-   const { register, handleSubmit, watch, errors } = useForm()
+   const { register, handleSubmit, errors } = useForm()
 
    const onSubmit = (newPrescript , e) => {
        
-        // Updating Data to DataContext 
+      
         const newDataArray = Array.from(ContextData.allBookedAppointments);
         const selectedIndex = newDataArray.indexOf(props.selectAppointment);
 
-        //Generating New prescription appending to previous
+     
         const SelectedApForModify = {...props.selectAppointment};
         console.log("old" ,SelectedApForModify);
         const newPrescription = SelectedApForModify.prescription ? Array.from(SelectedApForModify.prescription) :  [];
@@ -26,7 +27,7 @@ const PrescriptionModal = (props) => {
         newDataArray.splice(selectedIndex,1, SelectedApForModify);
         ContextData.setAllBookedAppointments(newDataArray);
 
-        // Storing Data To Database
+     
 
        const data = {id : props.selectAppointment._id, prescription : newPrescription }
        e.target.reset();

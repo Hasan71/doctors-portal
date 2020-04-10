@@ -1,8 +1,7 @@
 import React from 'react';
 import './Footer.css';
 import FooterCol from './FooterCol';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faFacebookF, faInstagram, faGooglePlusG } from '@fortawesome/free-brands-svg-icons';
+
 
 const Footer = () => {
     const noNamed = [
@@ -43,11 +42,7 @@ const Footer = () => {
                     <FooterCol key={2} menuTitle="Services" menuItems={services}/>
                     <FooterCol key={3} menuTitle="Oral Health" menuItems={oralHealth}/>
                     <FooterCol key={4} menuTitle="Our Address" menuItems={ourAddress}> 
-                        {/* <ul className="social-media list-inline">
-                            <li className="list-inline-item"><a href="//facebook.com/sakshor"><FontAwesomeIcon className="icon active-icon" icon={faFacebookF} /></a></li>
-                            <li className="list-inline-item"><a href="//google.com"><FontAwesomeIcon className="icon" icon={faGooglePlusG} /></a></li>
-                            <li className="list-inline-item"><a href="//instagram.com"><FontAwesomeIcon className="icon" icon={faInstagram} /></a></li>
-                        </ul> */}
+                        
                         <div className="mt-5">
                             <h6>Call now</h6>
                             <button className="btn btn-primary">+2025550295</button>
@@ -55,7 +50,7 @@ const Footer = () => {
                     </FooterCol>
                 </div>
                 <div className="copyRight text-center">
-                    <p>Copyright 2020 All Rights Reserved</p>
+                    <p>© Mahmudul Hasan 2020</p>
                 </div>
             </div>
         </footer>
